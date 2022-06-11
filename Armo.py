@@ -17,19 +17,19 @@ slots = ''
 def grab_pen():
     print("grab_pen() initialized")
     # G0 A0.0 B0.0 C0.0 D0.0 X0.0 Y0.0 Z0.0
-    ArduinoSerial.write(b'M3 S80')
+    ArduinoSerial.write(b'M80')
     time.sleep(1)
-    ArduinoSerial.write(b'G0 A25.0 C-9.0')
+    ArduinoSerial.write(b'A25.0 B-9.0')
     time.sleep(3)
-    ArduinoSerial.write(b'G0 Y-76.0')
+    ArduinoSerial.write(b'D-76.0')
     time.sleep(2)
-    ArduinoSerial.write(b'M3 S0')
+    ArduinoSerial.write(b'M0')
     time.sleep(1)
-    ArduinoSerial.write(b'G0 C-30.0')
+    ArduinoSerial.write(b'B-30.0')
     time.sleep(4)
-    ArduinoSerial.write(b'G0 A-60.0')
+    ArduinoSerial.write(b'A-60.0')
     time.sleep(5)
-    ArduinoSerial.write(b'M3 S80')
+    ArduinoSerial.write(b'M80')
 
 
 
@@ -80,7 +80,7 @@ while(1):
                 PsocDict = {}
 
             if intent == 'calibrate':
-                ArduinoSerial.write(b'G0 A0 B0 C0 D0 X0 Y0 Z0')
+                ArduinoSerial.write(b'A0 B0 C0 D0 E0')
                 PsocDict = {}
 
 

@@ -25,9 +25,9 @@ void setup() {
   Yaxis.setMaxSpeed(1000);
   Zaxis.setMaxSpeed(1000);
   
-  Xaxis.setAcceleration(100);
-  Yaxis.setAcceleration(100);
-  Zaxis.setAcceleration(100);
+  Xaxis.setAcceleration(200);
+  Yaxis.setAcceleration(200);
+  Zaxis.setAcceleration(400);
 }
 
 

@@ -41,7 +41,7 @@ void setup() {
 }
 
 void loop() {
-  if (mode == 'Z') {
+  if (mode == 'E') {
     // Update angles for Stepper motor 4 and 5
     Stepper1.moveTo(posZ1);
     Stepper2.moveTo(posZ2);
@@ -60,7 +60,7 @@ void receiveEvent() {
 
   mode = Wire.read(); // Reads first character to find which axis does the angle belong to
 
-  if (mode == 'Y') {
+  if (mode == 'D') {
     // Read angle value
     int val = Wire.read();
 
@@ -80,7 +80,7 @@ void receiveEvent() {
     posY2 = -posY;
   }
 
-  if (mode == 'Z') {
+  if (mode == 'E') {
     // axis Z/5 is the rotation of the end effector
     
     // Read angle value
